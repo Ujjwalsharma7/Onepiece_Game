@@ -45,7 +45,12 @@ setInterval(() => {
         cross = false
         setTimeout(() => {
             cross = true
-        },  1000 );
+        },  1000 ) ;
+       setTimeout(() => {
+        aniDur = parseFloat(window.getComputedStyle(obstacle, null).getPropertyValue('animation-duration'))
+        newDur = aniDur - 0.1;
+        obstacle.style.animationDuration = newDur + 's';
+       }, 500);
     }
 
 }, 10); 

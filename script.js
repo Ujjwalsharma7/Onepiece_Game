@@ -1,3 +1,5 @@
+score = 0;
+cross = true;
 document.onkeydown = function(e){
     console.log("key code is:", e.keyCode)
     if(e.keyCode==32){
@@ -32,9 +34,22 @@ setInterval(() => {
 
      offsetX = Math.abs(lx-ox)
      offsetY = Math.abs(ly-oy)
-     console.log(offsetX, offsetY)
+    //  console.log(offsetX, offsetY)
     if(offsetX< 53 && offsetY<32){
         gameOver.style.visibility = 'visible'
         obstacle.classList.remove('obstacleAni')
     }
-}, 100);
+    else if(offsetX< 80 && cross){
+        score+=1;
+        updateScore(score);
+        cross = false
+        setTimeout(() => {
+            cross = true
+        },  1000 );
+    }
+
+}, 10); 
+
+function updateScore(score){
+    scoreCont.innerHTML = "Your Score: " + score
+}

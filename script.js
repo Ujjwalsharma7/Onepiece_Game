@@ -35,7 +35,7 @@ setInterval(() => {
      offsetX = Math.abs(lx-ox)
      offsetY = Math.abs(ly-oy)
     //  console.log(offsetX, offsetY)
-    if(offsetX< 53 && offsetY<32){
+    if(offsetX< 53 && offsetY<60){
         gameOver.style.visibility = 'visible'
         obstacle.classList.remove('obstacleAni')
     }
@@ -49,7 +49,7 @@ setInterval(() => {
        setTimeout(() => {
         aniDur = parseFloat(window.getComputedStyle(obstacle, null).getPropertyValue('animation-duration'))
         newDur = aniDur - 0.1;
-        obstacle.style.animationDuration = newDur + 's';
+        obstacle.style.animationDuration = newDur + 's' ;
        }, 500);
     }
 

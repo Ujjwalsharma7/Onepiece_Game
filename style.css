@@ -16,6 +16,20 @@ body{
 }
 .gameOver{
     visibility: hidden;
+    position: relative;
+    top: 63px;
+    font-size: 120px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+#scoreCont{
+    position: relative;
+    left: 23px;
+    top: 23px;
+    border: 2px solid black;
+    padding: 10px;
+    width: 112px;
 }
 .luffy{
     background-image: url(kindpng_380820.png);

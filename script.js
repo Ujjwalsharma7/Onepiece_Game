@@ -1,5 +1,13 @@
 score = 0;
 cross = true;
+
+audiogo = new Audio("mixkit-arcade-space-shooter-dead-notification-272.wav")
+audio = new Audio("One Piece ! Theme ! Bgm ! Remix.mp3")
+
+setTimeout(() => {
+    audio.play()
+}, 500);
+ 
 document.onkeydown = function(e){
     console.log("key code is:", e.keyCode)
     if(e.keyCode==32){
@@ -38,6 +46,14 @@ setInterval(() => {
     if(offsetX< 53 && offsetY<60){
         gameOver.style.visibility = 'visible'
         obstacle.classList.remove('obstacleAni')
+        audiogo.play()
+        setTimeout(() => {
+            audiogo.pause();
+            audio.pause();
+        }, 1000);
+        setTimeout(() => {
+            audio.pause();
+        }, 500);
     }
     else if(offsetX< 80 && cross){
         score+=1;

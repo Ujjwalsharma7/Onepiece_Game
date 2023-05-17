@@ -24,9 +24,9 @@ body{
 }
 
 #scoreCont{
-    position: relative;
-    left: 23px;
-    top: 23px;
+    position: absolute;
+    right: 23px;
+    top: 20px;
     border: 2px solid black;
     padding: 10px;
     width: 112px;
